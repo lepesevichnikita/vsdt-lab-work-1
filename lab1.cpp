@@ -6,7 +6,7 @@
 using namespace std;
 
 int main() {
-	setlocale(0, "ru_RU.UTF-8");
+	setlocale(LC_ALL, "ru_RU.UTF-8");
 	cout << "Привет мир!" << endl;
 	cout << "Моё любимое число " << MY_FAVOURITE_NUMBER << endl;
 	cout << "Я учусь на 3м курсе ПолесГУ!" << endl;

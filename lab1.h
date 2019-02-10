@@ -22,5 +22,8 @@ double third_individual_task(const vector<double> & first_vector, const vector<d
 double vect_length(const vector<double> & vect);
 double scalar_multiplicate(const vector<double> & first_vector, const vector<double> & second_vector);
 
+template <typename T>
+void enter_variable_value(char * name, T & variable);
+
 
 // TODO: Reference additional headers your program requires here.

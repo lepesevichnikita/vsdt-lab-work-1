@@ -18,6 +18,29 @@ int main() {
   cout << "Тело с постоянным ускорением " << A << "м/с пройдёт расстояние в " << length << "м за " << time << "с." << endl;
 
   double x, y = 0.0;
+  enter_variable_value<double> ("X", x);
+  enter_variable_value<double> ("Y", y);
+
+  cout << "Результат вычисления первого задания при X=" << x << " Y=" << y << " равен " << individual_task(x, y) << endl;
+
+  double a = 0.0;
+  enter_variable_value<double>("A", a);
+  cout << "Результат вычисления второго задания при X=" << x << " Y=" << y << " и А=" << a << " равен " << second_individual_task(x, y, a) << endl;
+
+  vector<double> first_vector(2, 0), second_vector(2, 0);
+  cout << "\tЗаполнение первого вектора" << endl;
+  fill_vector(first_vector);
+
+  cout << "\tЗаполнение второго вектора" << endl;
+  fill_vector(second_vector);
+
+  cout << "Первый вектор:" << endl;
+  show_vector(first_vector);
+
+  cout << "Второй вектор:" << endl;
+  show_vector(second_vector);
+
+  cout << "Косинус угла между первым и вторым вектором равен " << third_individual_task(first_vector, second_vector);
 
   cin.ignore(INT_MAX, '\n');
   cin.get();
@@ -74,4 +97,10 @@ double scalar_multiplicate(const vector<double> & first_vector, const vector<dou
   double res = 0.0;
   res = first_vector[0] * second_vector[0] + first_vector[1] * second_vector[1];
   return res;
+}
+
+template <typename T>
+void enter_variable_value(char * name, T & variable) {
+  cout << "Введите значение переменной " << name << ":" << endl;
+  cin >> variable;
 }

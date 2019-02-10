@@ -1,0 +1,2 @@
+#define lab1_VERSION_MAJOR @lab1_VERSION_MAJOR@
+#define lab1_VERSION_MINOR @lab1_VERSION_MINOR@
